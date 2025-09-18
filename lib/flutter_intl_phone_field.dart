@@ -619,7 +619,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                           _selectedCountry.flag,
                           style: const TextStyle(fontSize: 18),
                         ),
-                  const SizedBox(width: 0),
+                  const SizedBox(width: 8),
                 ],
                 FittedBox(
                   child: Text(
