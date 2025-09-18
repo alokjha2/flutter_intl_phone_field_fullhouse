@@ -280,6 +280,8 @@ class IntlPhoneField extends StatefulWidget {
   /// Expands the field to fill the parent.
   final bool expands;
 
+  final double spaceBetweenFlagAndCountryCode;
+
   /// The strategy to use when the user has inserted more characters into the text field than are allowed by the current [maxLength].
   final MaxLengthEnforcement? maxLengthEnforcement;
 
@@ -299,6 +301,7 @@ class IntlPhoneField extends StatefulWidget {
     this.autofillHints,
     this.obscureText = false,
     this.textAlign = TextAlign.left,
+    this.spaceBetweenFlagAndCountryCode = 4,
     this.textAlignVertical,
     this.onTap,
     this.readOnly = false,
@@ -619,7 +622,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                           _selectedCountry.flag,
                           style: const TextStyle(fontSize: 18),
                         ),
-                  const SizedBox(width: 8),
+                  SizedBox(width: widget.spaceBetweenFlagAndCountryCode),
                 ],
                 FittedBox(
                   child: Text(
